@@ -36,7 +36,7 @@ const { createApp } = Vue
                 this.errore = false;
             }
 
-            {text: this.newTask = ''};
+            this.newTask = '';
         },
         deleteTask(indice){
             this.tasks.splice(indice, 1);
