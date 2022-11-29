@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vue-ToDolist</title>
+</head>
+<body>
+    <div id="myApp" class="container">
+        <h1>Vue To Do List</h1>
+        <div class="new-task">
+            <input type="text" placeholder="Inserisci Nuovo Task" v-model="newTask">
+            <button @click="addTask">Add New</button>
+        </div>
+        <div class="task-container">
+            <ul>
+                <li class="task" v-for="task in tasks">
+                    {{task.text}}
+                    <i class="fas fa-times"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
