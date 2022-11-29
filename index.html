@@ -13,7 +13,7 @@
     <div id="myApp" class="container">
         <h1>Vue To Do List</h1>
         <div class="new-task">
-            <input type="text" placeholder="Inserisci Nuovo Task" v-model="newTask">
+            <input type="text" placeholder="Inserisci Nuovo Task" v-model="newTask" @Keyup.enter="addTask">
             <button @click="addTask">Add New</button>
             <!-- Errore -->
             <div class="errore" v-if="errore">

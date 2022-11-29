@@ -31,6 +31,8 @@ const { createApp } = Vue
                 // Togliamo l'errore
                 this.errore = false;
             }
+
+            {text: this.newTask = ''};
         }
     }
   }).mount("#myApp")
