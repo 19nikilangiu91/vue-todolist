@@ -9,8 +9,15 @@
     text-align: center;
 }
 
+input, button{
+    margin: 0 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .task-container{
-    width: 50%;
+    width: 60%;
     min-height: 50px;
     margin: 10px auto;
     background-color: white;
@@ -26,6 +33,12 @@ ul{
     border-bottom: 1px solid black;
     padding: 10px;
     margin-right: 50px;
+}
+
+.task-complete{
+    width: 100%;
+    color: red;
+    border-color: red;
 }
 
 .errore{

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="myApp" class="container">
-        <h1>Vue To Do List</h1>
+        <h1>Vue-To-Do-List</h1>
         <div class="new-task">
             <input type="text" placeholder="Inserisci Nuovo Task" v-model="newTask" @Keyup.enter="addTask">
             <button @click="addTask">Add New</button>
@@ -23,8 +23,8 @@
         </div>
         <div class="task-container">
             <ul v-if="tasks.length > 0">
-                <li class="task" v-for="(task, indice) in tasks">
-                    {{task.text}}
+                <li class="task" v-for="(task, indice) in tasks" :class="task.done ? 'task-complete' : ''">
+                    <span @click="checkTask">{{task.text}}</span>
                     <i class="fas fa-times" @click="deleteTask(indice)"></i>
                 </li>
             </ul>
