@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        errore: false,
         newTask:'',
         tasks: [
             { 
@@ -22,7 +23,14 @@ const { createApp } = Vue
     },
     methods: {
         addTask(){
-            this.tasks.push({text: this.newTask});
+            if(this.newTask.length< 5 || this.newTask === ''){
+                // Inseriamo l'errore
+                this.errore = true;
+            }else{
+                this.tasks.push({text: this.newTask});
+                // Togliamo l'errore
+                this.errore = false;
+            }
         }
     }
   }).mount("#myApp")
