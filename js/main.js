@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        newTask:'',
         tasks: [
             { 
                 text: 'Fare i compiti', 
@@ -17,7 +18,6 @@ const { createApp } = Vue
                  done: false 
             }
         ],
-        newTask:'',
       }
     },
     methods: {
