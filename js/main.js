@@ -1,3 +1,7 @@
+// Descrizione:
+// riprodurre la ToDoList come viste insieme questa mattina,
+// ma con una struttura di array di oggetti e non un array di semplici stringhe.
+
 const { createApp } = Vue
 
   createApp({
@@ -33,6 +37,9 @@ const { createApp } = Vue
             }
 
             {text: this.newTask = ''};
+        },
+        deleteTask(indice){
+            this.tasks.splice(indice, 1);
         }
     }
   }).mount("#myApp")
